@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Model from "./components/Model"; /* highlight-line */
+import Model from "../model/Model";
 
-export default function App() {
+function Displayer() {
   return (
     <Canvas
       camera={{ position: [2, 0, 12.25], fov: 15 }}
@@ -17,9 +17,12 @@ export default function App() {
       <ambientLight intensity={0.1} />
       <directionalLight intensity={0.4} />
       <Suspense fallback={null}>
-        <Model position={[0.025, -0.9, 0]} /> 
+
+        <Model />
       </Suspense>
       <OrbitControls />
     </Canvas>
   );
 }
+
+export default Displayer;
