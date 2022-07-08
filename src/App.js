@@ -1,6 +1,7 @@
 import BoxArt from "./components/BoxArt";
 
 import "./App.css";
+import Chevron from "./icons/Chevron";
 
 export default function App() {
   return (
@@ -14,7 +15,9 @@ export default function App() {
             <h1>Project</h1>
           </div>
         </div>
-        <h2 className="welcome">Welcome!</h2>
+        <div className="icon-container">
+          <Chevron className={"see-more"} color={"white"} height={"3vh"} />
+        </div>
       </section>
     </div>
   );

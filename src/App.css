@@ -19,11 +19,10 @@ body {
   justify-content: space-evenly;
   border-top-left-radius: 23px;
   border-top-right-radius: 23px;
-  height: 25vh;
 }
 
 .header {
-  /* padding-top: 7.5%; */
+  padding-top: 5%;
   color: white;
   padding-bottom: 2.5%;
   border-bottom: 3px solid white;
@@ -41,12 +40,25 @@ body {
 }
 
 .title-header {
+  height: 25vh;
   display: flex;
-  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
 }
 
 .welcome {
   /* margin-top: 5%; */
   color: white;
   font-weight: 300;
+}
+
+.see-more {
+  position: absolute;
+  bottom: 2vh;
+  background-color: red;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
 }
