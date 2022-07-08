@@ -1,25 +1,21 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import Model from "./components/Model"; /* highlight-line */
+import BoxArt from "./components/BoxArt";
+
+import "./App.css";
 
 export default function App() {
   return (
-    <Canvas
-      camera={{ position: [2, 0, 12.25], fov: 15 }}
-      style={{
-        backgroundColor: "#111a21",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      <ambientLight intensity={1.25} />
-      <ambientLight intensity={0.1} />
-      <directionalLight intensity={0.4} />
-      <Suspense fallback={null}>
-        <Model position={[0.025, -0.9, 0]} /> 
-      </Suspense>
-      <OrbitControls />
-    </Canvas>
+    <div>
+      <BoxArt width={100} height={75} bg_color={"#dddddd"} distance={10} />
+      <section className="bg">
+        <div className="title-header">
+          <div className="header">
+            <h1>TENCHU</h1>
+            <h1>Reconstruction</h1>
+            <h1>Project</h1>
+          </div>
+        </div>
+        <h2 className="welcome">Welcome!</h2>
+      </section>
+    </div>
   );
 }
